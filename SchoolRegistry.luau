@@ -14,7 +14,7 @@ end
 
 const function stopClass(className, class)
 	const stop = class.Stop
-	assert(stop, "Class: " .. `"{className}"` .. " does not have a :stop")
+	if not stop then return end
 
 	stop(class)
 end
